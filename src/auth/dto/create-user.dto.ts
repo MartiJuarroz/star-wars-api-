@@ -1,5 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { ArrayNotEmpty, IsArray, IsEmail, IsNotEmpty, IsString, Matches, MaxLength, MinLength } from 'class-validator';
+import { ArrayNotEmpty, IsArray, IsEmail, IsEnum, IsIn, IsNotEmpty, IsString, Matches, MaxLength, MinLength } from 'class-validator';
+import { ValidRoles } from '../interfaces';
 
 
 export class CreateUserDto {
@@ -35,6 +36,7 @@ export class CreateUserDto {
 
     @IsArray()
     @ArrayNotEmpty()
+    @IsEnum(ValidRoles, { each: true, message: 'Each role must be either "User" or "Admin"' })
     @IsString({ each: true })
     @ApiProperty({ type: [String], example: ['Admin', 'User'] })
     roles: string[]

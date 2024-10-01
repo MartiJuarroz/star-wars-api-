@@ -1,8 +1,7 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
-export class CreateTables1727734539924 implements MigrationInterface {
-
-    name = 'CreateTables1727734539924'
+export class CreateTables1727797301846 implements MigrationInterface {
+    name = 'CreateTables1727797301846'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`CREATE TABLE "Movie" ("id" int NOT NULL IDENTITY(1,1), "title" varchar(100) NOT NULL, "director" varchar(50) NOT NULL, "producer" varchar(50), "release_date" date NOT NULL, "created" datetime NOT NULL, "edited" datetime, "isActive" bit NOT NULL CONSTRAINT "DF_d19129a0d6de92997c2d9be3fbf" DEFAULT 1, CONSTRAINT "PK_56d58b76292b87125c5ec8bdde0" PRIMARY KEY ("id"))`);

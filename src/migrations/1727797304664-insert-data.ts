@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 import * as bcrypt from 'bcrypt';
 
-export class InsertData1727734542949 implements MigrationInterface {
+export class InsertData1727797304664 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
 
@@ -46,4 +46,3 @@ export class InsertData1727734542949 implements MigrationInterface {
     }
 
 }
-

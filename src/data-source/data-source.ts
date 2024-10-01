@@ -2,8 +2,8 @@ import { DataSource, DataSourceOptions } from "typeorm";
 import * as dotenv from "dotenv";
 import { resolve } from "path";
 import { existsSync } from "fs";
-import { CreateTables1727734539924 } from "src/migrations/1727734539924-create-tables";
-import { InsertData1727734542949 } from "src/migrations/1727734542949-insert-data";
+import { CreateTables1727797301846 } from "src/migrations/1727797301846-create-tables";
+import { InsertData1727797304664 } from "src/migrations/1727797304664-insert-data";
 
 const dest= `${__dirname}/../../`;
 
@@ -28,7 +28,7 @@ export const Config:DataSourceOptions={
     // autoLoadEntities: true,
     migrationsRun: true,
     entities: ['dist/**/*.entity{.ts,.js}'],
-    migrations: [CreateTables1727734539924, InsertData1727734542949],
+    migrations: [CreateTables1727797301846, InsertData1727797304664],
     migrationsTableName: 'migrations',
 }
 export const AppDataSource: DataSource = new DataSource(Config);
