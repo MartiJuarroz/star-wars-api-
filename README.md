@@ -13,6 +13,6 @@
 4. Cambiar los datos de conexión a la base de datos si se requiere usar una base de datos con distintos valores.
 5. En caso de ser necesario, crear la base de datos con los valores incluidos en las variables de entorno, tiene que ser SQL Server ya que el conector elegido es ese.
 6. Levantar: ```npm run start:dev``` para levantar el proyecto local.
-7. Una vez levantado, deberían correr automáticamente las migraciones con la creación de las tablas y el insert de algunos datos.
+7. Una vez levantado, deberían correr automáticamente las migraciones con la creación de las tablas y el insert de algunos datos (puede tirar algún error la consola pero se debería crear bien todo, en todo caso bajar el proyecto con Crtl + C y volver a levantar).
 8. Ejecutar npm test movie.service para ejecutar los test.
 9. El swagger se encuentra en la url --> http://localhost:3000/swagger , se puede acceder una vez que esté levantado el proyecto, en caso de haber cambiado el puerto, se deberá colocar el puerto elegido en la url.
