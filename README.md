@@ -8,7 +8,7 @@
 -- Pasos para levantar el proyecto -- 
 
 1. Clonar proyecto
-2. ```npm install```
+2. Ejecutar el comando ```npm install```
 3. Usar el archivo ```local.env``` si es útil o cambiar las variables de entorno si es necesario.
 4. Cambiar los datos de conexión a la base de datos si se requiere usar una base de datos con distintos valores.
 5. En caso de ser necesario, crear la base de datos con los valores incluidos en las variables de entorno, tiene que ser SQL Server ya que el conector elegido es ese.
