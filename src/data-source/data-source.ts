@@ -25,7 +25,6 @@ export const Config:DataSourceOptions={
       encrypt: false, 
       trustServerCertificate: true 
     },
-    // autoLoadEntities: true,
     migrationsRun: true,
     entities: ['dist/**/*.entity{.ts,.js}'],
     migrations: [CreateTables1727797301846, InsertData1727797304664],

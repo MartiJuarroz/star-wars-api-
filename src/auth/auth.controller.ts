@@ -1,10 +1,7 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
-import { GetUser, Auth } from './decorators';
 import { CreateUserDto, LoginUserDto } from './dto';
-import { User } from './entities/user.entity';
-
 
 @ApiTags('Auth')
 @Controller('auth')
@@ -28,13 +25,5 @@ export class AuthController {
   loginUser(@Body() loginUserDto: LoginUserDto ) {
     return this.authService.login( loginUserDto );
   }
-
-  // @Get('check-status')
-  // @Auth()
-  // checkAuthStatus(
-  //   @GetUser() user: User
-  // ) {
-  //   return this.authService.checkAuthStatus( user );
-  // }
 
 }

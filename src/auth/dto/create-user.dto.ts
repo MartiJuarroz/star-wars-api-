@@ -1,8 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { ArrayNotEmpty, IsArray, IsEmail, IsEnum, IsIn, IsNotEmpty, IsString, Matches, MaxLength, MinLength } from 'class-validator';
+import { ArrayNotEmpty, IsArray, IsEmail, IsEnum, IsNotEmpty, IsString, Matches, MaxLength, MinLength } from 'class-validator';
 import { ValidRoles } from '../interfaces';
-
-
 export class CreateUserDto {
 
     @IsString()

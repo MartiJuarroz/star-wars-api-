@@ -5,18 +5,17 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MovieModule } from './movie/movie.module';
 import { HttpModule } from '@nestjs/axios';
-import { getEnvPath } from './common/helper/env.helper';
 import { AuthModule } from './auth/auth.module';
 import { User } from './auth/entities/user.entity';
 import { Role } from './auth/entities/role.entity';
 import { Movie } from './movie/entities/movie.entity';
 import { Config } from './data-source/data-source';
 
-const envFilePath: string = getEnvPath(`${__dirname}/../`);
-
 @Module({
   imports: [
-    ConfigModule.forRoot({envFilePath: [envFilePath], isGlobal: true}),
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),    
 
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
